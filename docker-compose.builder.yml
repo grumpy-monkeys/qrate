@@ -1,0 +1,23 @@
+version: '3.7'
+
+x-base: &base
+  image: node:12.16.1-alpine
+  volumes:
+    - .:/usr/src/service/
+    - nodemodules:/usr/src/service/node_modules
+  working_dir: /usr/src/service
+
+services:
+  install:
+    <<: *base
+    command: npm i
+  build:
+    <<: *base
+    command: npm run build
+  create-bundles:
+    <<: *base
+    command: npm run create-bundles
+
+volumes:
+  nodemodules:
+    external: true

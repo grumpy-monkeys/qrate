@@ -4,8 +4,8 @@
     {
       "type": "node",
       "request": "attach",
-      "name": "Debug: app-name",
-      "remoteRoot": "/usr/src/app",
+      "name": "Debug: qrate",
+      "remoteRoot": "/usr/src/service",
       "localRoot": "${workspaceFolder}",
       "protocol": "inspector",
       "port": 9229,
