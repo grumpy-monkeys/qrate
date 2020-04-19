@@ -18,7 +18,8 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "release": "standard-version"
   },
   "dependencies": {
     "@nestjs/common": "^7.0.0",
@@ -53,6 +54,7 @@
     "jest": "^25.1.0",
     "lint-staged": "^10.1.5",
     "prettier": "^1.19.1",
+    "standard-version": "^7.1.0",
     "supertest": "^4.0.2",
     "ts-jest": "25.2.1",
     "ts-loader": "^6.2.1",
