@@ -7,4 +7,8 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   await app.listen(SERVER_PORT);
 }
-bootstrap();
+
+bootstrap().catch(e => {
+  console.log(e);
+  throw e;
+});
